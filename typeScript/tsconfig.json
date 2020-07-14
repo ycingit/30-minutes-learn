@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "outDir": "./js",
+        "noEmitOnError": false,
+        "target": "ES6",
+        "module": "commonjs",
+        "baseUrl": "."
+    },
+    "include": [
+        "ts/**/*",
+        "types/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
