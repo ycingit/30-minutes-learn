@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        var ctx = document.getElementById('canvas').getContext('2d');
+        ctx.font = "24px serif";
+        // ctx.fillText("Hello world", 10, 50);
+        ctx.textBaseline = "hanging";
+        ctx.strokeText("foo1111111111121212121", 0, 50);
+        var text = ctx.measureText("foo1111111111121212121");
+        console.log(text.width)
+    </script>
+</body>
+</html>
