@@ -17,6 +17,9 @@ MinStack.prototype.push = function(x) {
  * @return {void}
  */
 MinStack.prototype.pop = function() {
+    if (this.isEmpty()) {
+        return null
+    }
     this.stack.pop()
 };
 
@@ -24,6 +27,9 @@ MinStack.prototype.pop = function() {
  * @return {number}
  */
 MinStack.prototype.top = function() {
+    if (this.isEmpty()) {
+        return null
+    }
     return this.stack[this.stack.length - 1]
 };
 
@@ -38,6 +44,13 @@ MinStack.prototype.getMin = function() {
         }
     })
     return min
+};
+
+/**
+ * @return {boolean}
+ */
+ MinStack.prototype.isEmpty = function() {
+    return this.stack.length === 0 ? true : false
 };
 
 /**
