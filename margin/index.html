@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.father{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(219, 68, 101);
+            margin-left: 100px;
+            margin-top: 100px;
+            /* 触发bfc overflow: hidden; */
+            /* overflow: hidden; */
+        }
+        div.father div.son{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(56, 248, 207);
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        .one{
+            background-color: pink;
+            height: 20px;
+            margin-bottom: 100px;
+            overflow: hidden;
+        }
+        .two{
+            background-color: purple;
+            height: 20px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>margin塌陷</div>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <div style="margin-top: 50px;">margin合并</div>
+    <div class="one"></div>
+    <div class="two"></div>
+</body>
+</html>
